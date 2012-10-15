@@ -2,14 +2,14 @@
 {% load cms_tags %}
 
 
-{% block banner %}
+{% block _banner %}
     <div class="jumbotron masthead">
       <div class="container">
-            {% placeholder banner_content %}
+            {% placeholder banner %}
       </div>
     </div>
-{% endblock banner %}
+{% endblock %}
 
-{% block content %}
-        {% placeholder base_content %}
+{% block _content %}
+        {% placeholder content %}
 {% endblock %}
