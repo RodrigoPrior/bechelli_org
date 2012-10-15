@@ -68,14 +68,13 @@
                 {% load menu_tags %}
                 <ul class="nav">
                     {% show_menu 0 100 100 100 %}
-                    <li>
-                      <div class="clearfix btn-group">
-                        <a class="btn btn-primary btn-mini" href="#">{% trans "language" %}</a>
-                        <a class="btn btn-primary dropdown-toggle btn-mini" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                    <li class="dropdown">
+                      
+                        <a class="dropdown-toggle" data-toggle="dropdown"  href="#">{% trans "language" %} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li>{% language_chooser %}</li>
                         </ul>
-                      </div>
+                      
                     </li>
                 </ul>
           </div>
