@@ -118,6 +118,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'cms.context_processors.media',
     'sekizai.context_processors.sekizai',
     'django.contrib.messages.context_processors.messages',
+    'zinnia.context_processors.version', # Optional
 )
 
 CMS_TEMPLATES = (
@@ -162,6 +163,10 @@ INSTALLED_APPS = (
     'south', 
     'sekizai',
     'reversion',
+
+    'django.contrib.comments',
+    'tagging',
+    'zinnia',
 
     # dev environment
     # 'django_extensions',
