@@ -3,6 +3,10 @@
 <link href="{{ STATIC_URL }}css/ubuntu.bootstrap.min.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/docs.css" rel="stylesheet">
+{% load zinnia_tags i18n %}
+{% load url from future %}
+<link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest entries" %}" href="{% url 'zinnia_entry_latest_feed' %}" />
+<link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest discussions" %}" href="{% url 'zinnia_discussion_latest_feed' %}" />
 {% endaddtoblock %}
 {% addtoblock "js" %}
 <link href="{{ STATIC_URL }}js/google-code-prettify/prettify.css" rel="stylesheet">
