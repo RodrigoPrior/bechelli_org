@@ -1,0 +1,102 @@
+{% load cms_tags sekizai_tags %}
+{% addtoblock "css" %}
+<link href="{{ STATIC_URL }}css/ubuntu.bootstrap.min.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/docs.css" rel="stylesheet">
+{% endaddtoblock %}
+{% addtoblock "js" %}
+<link href="{{ STATIC_URL }}js/google-code-prettify/prettify.css" rel="stylesheet">
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.js"></script>
+<script src="{{ STATIC_URL }}js/google-code-prettify/prettify.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-transition.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-alert.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-dropdown.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-scrollspy.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-tab.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-tooltip.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-popover.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-button.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-carousel.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap-affix.js"></script>
+<script src="{{ STATIC_URL }}js/application.js"></script>
+{% endaddtoblock %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ request.current_page.get_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Rodrigo Prior Bechelli">
+    <meta name="keywords" content="{% block meta-keywords %}{% endblock %}" />
+    <meta name="description" content="{% block meta-description %}{% endblock %}" />
+
+    <!-- block css static-->
+    {% render_block "css" %}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}ico/apple-touch-icon-57-precomposed.png">
+
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    {% cms_toolbar %}
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">bechelli.org</a>
+          <div class="nav-collapse collapse">
+                {% load menu_tags %}
+                <ul class="nav">
+                    {% show_menu 0 100 100 100 %}
+                </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% block banner %}{% endblock %}
+
+
+
+<div class="container">
+
+        {% block content %}{% endblock %}
+
+</div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        {% block footer %}{% endblock %}
+      </div>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% render_block "js" %}
+  </body>
+</html>
