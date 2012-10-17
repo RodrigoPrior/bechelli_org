@@ -1,5 +1,6 @@
 {% load cms_tags sekizai_tags %}
 {% addtoblock "css" %}
+<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/ubuntu.bootstrap.min.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/docs.css" rel="stylesheet">
@@ -63,6 +64,11 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="brand" href="/">bechelli.org</a>
           <div class="nav-collapse collapse">
                 {% load menu_tags %}
