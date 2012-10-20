@@ -1,4 +1,5 @@
 {% load cms_tags sekizai_tags %}
+{% load analytical %}
 {% addtoblock "css" %}
 <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/ubuntu.bootstrap.min.css" rel="stylesheet">
@@ -32,6 +33,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% analytical_head_top %}
     <meta charset="utf-8">
     <title>{{ request.current_page.get_title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,9 +56,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}ico/apple-touch-icon-57-precomposed.png">
-
+    {% analytical_head_bottom %}
   </head>
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    {% analytical_body_top %}
     {% cms_toolbar %}
 
     <!-- Navbar
@@ -112,5 +115,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% render_block "js" %}
+    {% analytical_body_bottom %}
   </body>
 </html>

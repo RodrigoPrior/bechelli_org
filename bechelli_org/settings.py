@@ -168,6 +168,8 @@ INSTALLED_APPS = (
     'tagging',
     'zinnia',
 
+    'analytical',
+
     # dev environment
     # 'django_extensions',
 
@@ -202,3 +204,5 @@ LOGGING = {
         },
     }
 }
+
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-1022240-25'
