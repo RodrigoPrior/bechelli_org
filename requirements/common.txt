@@ -1,6 +1,5 @@
 PIL
 Django==1.4.1
-Fabric==1.4.1
 South==0.7.4
 django-cms==2.3.3
 -e git+git://github.com/etianen/django-reversion.git#egg=django-reversion
