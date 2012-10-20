@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from cms.sitemaps import CMSSitemap
 from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
@@ -18,6 +19,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': {'cmspages': CMSSitemap}}),
     url(r'^', include('cms.urls')),
 )
 
