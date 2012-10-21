@@ -8,3 +8,4 @@ beautifulsoup4
 django-blog-zinnia
 django-analytical
 django-compressor
+slimit
