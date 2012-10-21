@@ -1,6 +1,8 @@
 {% load cms_tags sekizai_tags %}
+{% load compress %}
 {% load analytical %}
 {% addtoblock "css" %}
+{% compress css %}
 <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/ubuntu.bootstrap.min.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
@@ -9,10 +11,13 @@
 {% load url from future %}
 <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest entries" %}" href="{% url 'zinnia_entry_latest_feed' %}" />
 <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest discussions" %}" href="{% url 'zinnia_discussion_latest_feed' %}" />
+{% endcompress %}
 {% endaddtoblock %}
+
 {% addtoblock "js" %}
-<link href="{{ STATIC_URL }}js/google-code-prettify/prettify.css" rel="stylesheet">
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+{% compress js %}
+<link href="{{ STATIC_URL }}js/google-code-prettify/prettify.css" rel="stylesheet">
 <script src="{{ STATIC_URL }}js/jquery.js"></script>
 <script src="{{ STATIC_URL }}js/google-code-prettify/prettify.js"></script>
 <script src="{{ STATIC_URL }}js/bootstrap-transition.js"></script>
@@ -29,6 +34,7 @@
 <script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
 <script src="{{ STATIC_URL }}js/bootstrap-affix.js"></script>
 <script src="{{ STATIC_URL }}js/application.js"></script>
+{% endcompress %}
 {% endaddtoblock %}
 <!DOCTYPE html>
 <html lang="en">

@@ -83,6 +83,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'compressor.finders.CompressorFinder', 
 )
 
 # Make this unique, and don't share it with anybody.
@@ -172,6 +173,8 @@ INSTALLED_APPS = (
 
     'analytical',
 
+    'compressor',
+
     # dev environment
     # 'django_extensions',
 
@@ -208,3 +211,8 @@ LOGGING = {
 }
 
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-1022240-25'
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = False
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter']
+COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.SlimItFilter']
