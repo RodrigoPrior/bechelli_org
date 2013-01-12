@@ -216,3 +216,5 @@ COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = False
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter']
 COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.SlimItFilter']
+
+ZINNIA_AUTO_MODERATE_COMMENTS = True
