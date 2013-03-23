@@ -1,8 +1,8 @@
 PIL
-Django==1.4.1
+Django==1.4.5
 South==0.7.4
-django-cms==2.3.3
--e git+git://github.com/etianen/django-reversion.git#egg=django-reversion
+django-cms==2.3.5
+django-reversion==1.6.5
 django-tagging>=0.3.1
 beautifulsoup4
 django-blog-zinnia
