@@ -25,7 +25,7 @@ DEFAULT_LANGUAGE = 0
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': os.path.join(PROJECT_DIR, 'bechelli_org.sqlite3db'),
     }
 }
@@ -119,7 +119,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'cms.middleware.multilingual.MultilingualURLMiddleware', # add translation
+    'cms.middleware.multilingual.MultilingualURLMiddleware',  # add translation
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
@@ -134,7 +134,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'cms.context_processors.media',
     'sekizai.context_processors.sekizai',
     'django.contrib.messages.context_processors.messages',
-    'zinnia.context_processors.version', # Optional
+    'zinnia.context_processors.version',  # Optional
 )
 
 CMS_TEMPLATES = (
