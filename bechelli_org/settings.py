@@ -186,6 +186,8 @@ INSTALLED_APPS = (
     'tagging',
     'zinnia',
 
+    'disqus',
+
     'analytical',
 
     'compressor',
@@ -195,6 +197,9 @@ INSTALLED_APPS = (
 
 
 )
+
+# Disqus integration
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -227,7 +232,7 @@ LOGGING = {
 
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-1022240-25'
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 COMPRESS_OFFLINE = False
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter']
 COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.SlimItFilter']
