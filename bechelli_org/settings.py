@@ -140,6 +140,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 CMS_TEMPLATES = (
     ('base_content.html', 'base_content'),
     ('base_content_right_sidebar.html', 'base + right_sidebar'),
+    ('base_content_3_columns.html', '3 columns: left + base + right'),
 )
 
 ROOT_URLCONF = 'bechelli_org.urls'
