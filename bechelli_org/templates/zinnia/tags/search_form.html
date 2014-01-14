@@ -1,8 +1,7 @@
 {% load i18n %}
 {% load url from future %}
-<form class="form-search" method="get" id="searchform" action="{% url 'zinnia_entry_search' %}">
-    <div class="input-append">
-        <input class="span2 search-query" type="text" value="{% trans "Keywords..." %}" name="pattern" id="searchbox" onfocus="this.value=''" />
-        <input type="submit" class="btn" value="OK" />
+<form role="form" method="get" id="searchform" action="{% url 'zinnia_entry_search' %}">
+    <div class="form-group">
+        <input class="span2 form-control input-sm" type="text" value="{% trans "Keywords..." %}" name="pattern" id="searchbox" onfocus="this.value=''" />
 </div>
 </form>
