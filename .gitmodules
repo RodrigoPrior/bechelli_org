@@ -1,3 +1,6 @@
 [submodule "bechelli_org/bootstrap"]
 	path = bechelli_org/bootstrap
 	url = git://github.com/twitter/bootstrap.git
+[submodule "bechelli_org/bootswatch"]
+	path = bechelli_org/bootswatch
+	url = https://github.com/thomaspark/bootswatch.git
