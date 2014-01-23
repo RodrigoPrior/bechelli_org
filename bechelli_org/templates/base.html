@@ -57,23 +57,22 @@
     <!-- Navbar
     ================================================== -->
     <div class="navbar navbar-inverse" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">bechelli.org</a>
-        </div>
         <div class="container">
-          
-          <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">bechelli.org</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-inverse-collapse">
                 {% load menu_tags %}
                 <ul class="nav navbar-nav">
                     {% show_menu 0 100 100 100 %}
                 </ul>
-          </div>
+            </div>
         </div>
     </div>
 
