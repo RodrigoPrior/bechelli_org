@@ -25,18 +25,11 @@ DEFAULT_LANGUAGE = 0
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(PROJECT_DIR, 'bechelli_org.sqlite3db'),
     }
 }
 
-# memcache cache support
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
-}
 
 CMS_CACHE_PREFIX = 'bechelliorg'
 
@@ -97,7 +90,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.DefaultStorageFinder',
-    'compressor.finders.CompressorFinder', 
+    'compressor.finders.CompressorFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -167,7 +160,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     # django-cms app list
     'cms.plugins.text',
-    'cms.plugins.picture', 
+    'cms.plugins.picture',
     'cms.plugins.link',
     'cms.plugins.file',
     'cms.plugins.snippet',
@@ -179,7 +172,7 @@ INSTALLED_APPS = (
     'cms',
     'menus',
     'mptt',
-    'south', 
+    'south',
     'sekizai',
     'reversion',
 
