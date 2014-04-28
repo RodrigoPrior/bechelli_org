@@ -112,7 +112,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'cms.middleware.multilingual.MultilingualURLMiddleware',  # add translation
+    # 'cms.middleware.multilingual.MultilingualURLMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
