@@ -1,5 +1,5 @@
 pillow
-Django==1.4.5
+Django==1.4.11
 South==0.7.4
 django-cms==2.3.5
 django-reversion<1.7
