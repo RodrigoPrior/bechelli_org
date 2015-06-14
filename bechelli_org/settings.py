@@ -26,7 +26,7 @@ DEFAULT_LANGUAGE = 0
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_DIR, 'bechelli_org.sqlite3db'),
+        'NAME': os.path.join(PROJECT_DIR, 'bechelli_org.db'),
     }
 }
 
@@ -227,7 +227,7 @@ LOGGING = {
 
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-1022240-25'
 
-COMPRESS_ENABLED = False
+COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = False
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter']
 COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.SlimItFilter']
