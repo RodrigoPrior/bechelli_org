@@ -1,13 +1,13 @@
 pillow
-Django==1.5.7
+Django==1.5.12
 South==0.7.4
 django-cms==2.4.3
 django-reversion==1.6.6
 django-tagging==0.3.1
 beautifulsoup4
 django-blog-zinnia==0.13
-django-analytical==0.14.0
+django-analytical==0.22.0
 django-compressor==1.5
 ply==3.4
 slimit==0.8.1
-django-disqus==0.4.1
+django-disqus==0.5
