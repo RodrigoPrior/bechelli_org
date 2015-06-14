@@ -1,3 +1,6 @@
 *.pyc
 *.sqlite3db
 *.db
+fabfile.py
+fabric_tplt/
+.arcconfig
